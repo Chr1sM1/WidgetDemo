@@ -19,25 +19,27 @@
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ic_default_header" />
     </FrameLayout>
+
     <EditText
         android:id="@+id/et_username"
         android:layout_width="260dp"
         android:layout_height="48dp"
-        android:background="@drawable/edittext_background"
         android:layout_gravity="center_horizontal"
         android:layout_marginLeft="35dp"
         android:layout_marginTop="35dp"
         android:layout_marginRight="35dp"
+        android:background="@drawable/edittext_background"
         android:drawableStart="@drawable/ic_username"
         android:drawablePadding="10dp"
         android:gravity="center_vertical"
         android:hint="请输入用户名"
+        android:inputType="text"
         android:paddingStart="8dp"
         android:singleLine="true"
         android:textColor="#000000"
         android:textColorHint="#a3a3a3"
-        android:textSize="14sp"
-        android:inputType="text" />
+        android:textSize="14sp" />
+
     <EditText
         android:id="@+id/et_password"
         android:layout_width="260dp"
@@ -57,7 +59,8 @@
         android:singleLine="true"
         android:textColor="#000000"
         android:textColorHint="#a3a3a3"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:imeOptions="actionNext"/>
 
     <Button
         android:id="@+id/btn_login"

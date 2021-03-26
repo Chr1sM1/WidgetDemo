@@ -2,6 +2,7 @@ package com.example.widgetdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.Button;
@@ -31,19 +32,20 @@ public class LoginActivity extends AppCompatActivity {
             final String password=etPassword.getText().toString();
 
 
-            //3.2 判断用户名、面膜是否正确，根据判断结果进行处理，成功则跳转，错误给出提示
+            //3.2 判断用户名、密码是否正确，根据判断结果进行处理，成功则跳转，错误给出提示
             if(TextUtils.isEmpty(username)||TextUtils.isEmpty(password)){
                 Toast.makeText(LoginActivity.this,"用户名或密码不能为空",Toast.LENGTH_SHORT).show();
             }else if(username.equals("android")&&password.equals("123456")){
                 Toast.makeText(LoginActivity.this,"登录信息"+username+","+password,
                         Toast.LENGTH_SHORT).show();
 
+                final Intent intent=new Intent(LoginActivity.this, InfoActivity.class);
+                intent.putExtra("username",username);
+                // 跳转到另一个界面
+                startActivity(intent);
+                finish();
             }else{
-//                final Intent intent=new Intent(LoginActivity.this, InfoActivity.class);
-//                intent.putExtra("username",username);
-//                // 跳转到另一个界面
-//                startActivity(intent);
-//                finish();
+
                 Toast.makeText(LoginActivity.this,"用户名或密码错误",Toast.LENGTH_SHORT).show();
                 etPassword.setText("");
                 etPassword.requestFocus();
