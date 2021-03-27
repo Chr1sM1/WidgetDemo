@@ -55,7 +55,7 @@ public class InfoActivity extends AppCompatActivity implements View.OnClickListe
         CheckBox cbMath = findViewById(R.id.cb_math);
 
         //获取按钮对象，设置它的点击事件监听器
-        Button btnConfirm = findViewById(R.id.btn_confrim);
+        Button btnConfirm = findViewById(R.id.btn_confirm);
         //设置事件监听器
         cbJava.setOnCheckedChangeListener(this);
         cbAndroid.setOnCheckedChangeListener(this);
